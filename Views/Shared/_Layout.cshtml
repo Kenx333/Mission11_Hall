@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Mission11_Hall</title>
+    <!-- Link to Bootstrap CSS -->
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <!-- Link to custom site-specific CSS -->
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <!-- Link to custom styles specific to Mission11_Hall -->
+    <link rel="stylesheet" href="~/Mission11_Hall.styles.css" asp-append-version="true" />
+</head>
+<body>
+
+    <!-- Navbar section -->
+    <div class="bg-dark text-white p-2">
+        <span class="navbar-brand m-lg-2">THE ONLINE BOOKSTORE</span>
+    </div>
+    <!-- End of Navbar section -->
+    <!-- Filtering section (placeholder) -->
+    <div class="row m-1 p-1">
+        <div class="col-3">Add filtering later</div>
+    </div>
+    <!-- End of Filtering section -->
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            <!-- Main content rendered by child pages -->
+            @RenderBody()
+        </main>
+    </div>
+
+    <!-- Scripts section -->
+    <!-- jQuery -->
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap bundle -->
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom site-specific JavaScript -->
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <!-- Render additional scripts defined by child pages -->
+    @await RenderSectionAsync("Scripts", required: false)
+    <!-- End of Scripts section -->
+</body>
+</html>

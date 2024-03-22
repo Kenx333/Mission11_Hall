@@ -1,0 +1,18 @@
+﻿@{
+    // Set the title for the page.
+    ViewData["Title"] = "Home Page";
+}
+
+@model BooksListViewModel
+
+<h1>The Online Bookstore</h1>
+
+<!-- Iterate over each book in the model and render its summary using the BookSummary partial view. -->
+@foreach (Book b in Model.Books)
+{
+    <partial name="BookSummary" model="b" />
+}
+
+<!-- Render the pagination controls for navigating through the book list. -->
+<div page-model="@Model.PaginationInfo" page-action="Index" page-classes-enabled="true" page-class="btn"
+     page-class-normal="btn-outline-dark" page-class-selected="btn-primary" class="btn-group pull-right m-1"></div>

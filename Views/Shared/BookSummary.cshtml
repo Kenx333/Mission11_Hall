@@ -1,0 +1,31 @@
+﻿@* Comment: Information on enabling MVC for empty projects *@
+
+@{
+    // Razor code block
+}
+
+@model Book
+
+<!-- Card container for displaying book details -->
+<div class="card m-1 p-1">
+    <!-- Title of the book -->
+    <h4>@Model.Title</h4>
+
+    <!-- Unordered list for displaying book details -->
+    <ul>
+        <!-- Author of the book -->
+        <li>Author: @Model.Author</li>
+        <!-- Publisher of the book -->
+        <li>Publisher: @Model.Publisher</li>
+        <!-- ISBN of the book -->
+        <li>ISBN: @Model.Isbn</li>
+        <!-- Classification of the book -->
+        <li>Classification: @Model.Classification</li>
+        <!-- Category of the book -->
+        <li>Category: @Model.Category</li>
+        <!-- Page count of the book -->
+        <li>Page Count: @Model.PageCount</li>
+        <!-- Price of the book -->
+        <li>Price: @Model.Price</li>
+    </ul>
+</div>
